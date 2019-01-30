@@ -6,10 +6,11 @@ a totally nifty converter that takes an svg file, strips it down to the bare min
 ```
 import eez from '@vibrent/svg-combopath';
 
+// React Component stuff continues... then in your render() method...
+
 render() {
   <svg 
     {...props}
-    fill={props.color}
     width={props.size}
     height={props.size}
     >

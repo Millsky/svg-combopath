@@ -1,7 +1,7 @@
 {
   "name": "svg-combopath",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "No License",
   "publishConfig": {
     "registry": "https://nex.vibrenthealth.com/repository/vibrent-npm"

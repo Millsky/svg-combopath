@@ -4,7 +4,7 @@ a totally nifty converter that takes an svg file, strips it down to the bare min
 # usage
 
 ```
-import eez from '@vibrent/svg-combopath';
+import { eez } from '@vibrent/svg-combopath';
 
 // React Component stuff continues... then in your render() method...
 
@@ -14,7 +14,7 @@ render() {
     width={props.size}
     height={props.size}
     >
-      <path d={eez[props.name]} />
+      <path d={eez} />
   </svg>
 }
 ```

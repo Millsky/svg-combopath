@@ -21,10 +21,10 @@ fs.readdir('./originalSVGs', function (err, files) {
     // function to build a string to be used to create an export of every svg's combined path
     const createJSON = (svgPath, svg) => {
         const svgName = Object.keys(svg)[0];
-        return `export const ${svgName.substring(0, svgName.indexOf('.'))} = ${JSON.stringify({d: `${svgPath}`})}`;
+        return `export const ${svgName.substring(0, svgName.indexOf('.'))} = ${JSON.stringify(`${svgPath}`)};`;
     };
 
-    const longDpaths = result.map(function(svg) {
+    const longDs = result.map(function(svg) {
         return createJSON(svg[`${Object.keys(svg)[0]}`], svg);
     }).reduce((acc, exportSVG) => {
         return `
@@ -33,5 +33,5 @@ fs.readdir('./originalSVGs', function (err, files) {
         `
     }, '');
 
-    fs.writeFileSync(`./combinedPaths/total.js`, longDpaths)
+    fs.writeFileSync(`./combinedPaths/total.js`, longDs);
 });

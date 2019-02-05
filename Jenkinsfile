@@ -75,7 +75,7 @@ podTemplate(
                         sh """
                             cd ${workspace}
                             npm install --registry ${npmregistry}
-                            node run index.js
+                            node index.js
                         """
                     }
                 }

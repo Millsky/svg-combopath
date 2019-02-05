@@ -63,7 +63,7 @@ podTemplate(
                         submoduleCfg: [],
                         userRemoteConfigs: [[
                             credentialsId: 'e08f3fab-ba06-459b-bebb-5d7df5f683a3',
-                            url: 'git@github.com:VibrentHealth/atomic-legos',
+                            url: 'git@github.com:VibrentHealth/svg-combopath',
                             refspec: "${refspecs}"
                         ]]
                     ])

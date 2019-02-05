@@ -1,5 +1,5 @@
 {
-  "name": "svg-combopath",
+  "name": "@vibrent/svg-combopath",
   "version": "0.0.1",
   "main": "dist/index.js",
   "license": "No License",

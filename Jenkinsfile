@@ -80,6 +80,18 @@ podTemplate(
                     }
                 }
             },
+            unitTest:{
+                container('node') {
+                    try {
+                         sh """
+                             npm run-script test
+                         """
+                    } catch (Exception ex) {
+                        echo '[FAILURE] - test failure, saving artifacts'
+                        archiveArtifacts artifacts: 'src/lib/components/__image_snapshots__/**/*.png'
+                    }
+                }
+            },
             sonar: {
                 runSonarAnalysis (project: env.PROJECT, tool: 'scanner', sonarBranch: env.BRANCH_NAME, projectVersion: version, sonarReportPaths: 'coverage/lcov.info')
             },

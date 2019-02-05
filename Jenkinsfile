@@ -63,7 +63,7 @@ podTemplate(
                         submoduleCfg: [],
                         userRemoteConfigs: [[
                             credentialsId: 'e08f3fab-ba06-459b-bebb-5d7df5f683a3',
-                            url: 'git@github.com:VibrentHealth/atomic-legos',
+                            url: 'git@github.com:VibrentHealth/svg-combopath',
                             refspec: "${refspecs}"
                         ]]
                     ])
@@ -75,8 +75,20 @@ podTemplate(
                         sh """
                             cd ${workspace}
                             npm install --registry ${npmregistry}
-                            node run index.js
+                            node index.js
                         """
+                    }
+                }
+            },
+            unitTest:{
+                container('node') {
+                    try {
+                         sh """
+                             npm run-script test
+                         """
+                    } catch (Exception ex) {
+                        echo '[FAILURE] - test failure, saving artifacts'
+                        archiveArtifacts artifacts: 'src/lib/components/__image_snapshots__/**/*.png'
                     }
                 }
             },

@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git://github.com/VibrentHealth/svg-combopath.git"
   },
+  "scripts": {
+    "test": "echo no tests"
+  },
   "dependencies": {
     "extract-svg-path": "^2.1.0",
     "load-svg": "^1.0.0"

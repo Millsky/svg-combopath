@@ -14,7 +14,7 @@ fs.readdir('./originalSVGs', function (err, files) {
     });
 
     // make the directory ./combinedPaths recursively in case it already exists
-    fs.mkdir('./combinedPaths', { recursive: true }, (err) => {
+    fs.mkdir('./dist', { recursive: true }, (err) => {
         if (err) throw err;
     });
 
@@ -33,5 +33,5 @@ fs.readdir('./originalSVGs', function (err, files) {
         `
     }, '');
 
-    fs.writeFileSync(`./combinedPaths/total.js`, longDs);
+    fs.writeFileSync(`./dist/index.js`, longDs);
 });

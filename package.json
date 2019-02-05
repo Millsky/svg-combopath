@@ -1,0 +1,16 @@
+{
+  "name": "@vibrent/atomic-legos",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "No License",
+  "publishConfig": {
+    "registry": "https://nex.vibrenthealth.com/repository/vibrent-npm"
+  },
+  "dependencies": {
+    "extract-svg-path": "^2.1.0",
+    "load-svg": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

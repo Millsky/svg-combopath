@@ -1,10 +1,14 @@
 {
-  "name": "@vibrent/svg-combopath",
+  "name": "svg-combopath",
   "version": "0.0.1",
   "main": "index.js",
   "license": "No License",
   "publishConfig": {
     "registry": "https://nex.vibrenthealth.com/repository/vibrent-npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/VibrentHealth/svg-combopath.git"
   },
   "dependencies": {
     "extract-svg-path": "^2.1.0",
